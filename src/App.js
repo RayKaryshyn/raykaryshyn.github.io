@@ -1,6 +1,7 @@
-import { Switch, Route, Redirect, Link } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Projects from './Projects';
 import Header from './Header';
+import { HashLink } from 'react-router-hash-link';
 
 function App() {
   return (
@@ -16,18 +17,22 @@ function App() {
               Projects
               <ul>
                 <li>
-                  <Link to='/projects/testing1'>
+                  <HashLink to='/projects/testing1'>
                     Testing1
-                  </Link>
+                  </HashLink>
                 </li>
                 <li>
-                  <Link to='/projects/testing2'>
+                  <HashLink to='/projects/testing2'>
                     Testing2
-                  </Link>
+                  </HashLink>
                 </li>
               </ul>
             </div>
             <div id='contact' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>Contact</div>
+          </Route>
+
+          <Route exact path='/home'>
+            <Redirect to='/#home' />
           </Route>
 
           <Route exact path='/about'>
@@ -43,6 +48,10 @@ function App() {
 
           <Route exact path='/contact'>
             <Redirect to='/#contact' />
+          </Route>
+
+          <Route>
+            404
           </Route>
         </Switch>
       </div>

@@ -1,18 +1,44 @@
-import { Switch, Route } from 'react-router-dom';
-import { NavHashLink } from "react-router-hash-link";
+import { Switch, Route, Redirect, Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import Projects from './Projects';
+import Header from './Header';
 
 function App() {
   return (
     <>
-      <Switch>
-        <Route exact path="/">
-          <NavHashLink to="/#home" id="test" smooth style={{ display: 'block', marginBottom: '1000vh' }}>Go</NavHashLink>
-          <div id="home">Home</div>
-          <NavHashLink to="/#about" smooth style={{ display: 'block', marginBottom: '1000vh' }}>Go</NavHashLink>
-          <div id="about">About</div>
-          <NavHashLink to="/#test" smooth style={{ display: 'block', marginBottom: '1000vh' }}>Go</NavHashLink>
-        </Route>
-      </Switch>
+      <div className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4">
+        <Header />
+
+        <Switch>
+          <Route exact path='/'>
+            <div id='home' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>Home</div>
+            <div id='about' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>About</div>
+            <div id='projects' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>
+              Projects
+              <ul>
+                <li>
+                  <Link to='/projects/testing1'>
+                    Testing1
+                  </Link>
+                </li>
+                <li>
+                  <HashLink to='/projects/testing2'>
+                    Testing2
+                  </HashLink>
+                </li>
+              </ul>
+            </div>
+            <div id='contact' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>Contact</div>
+          </Route>
+
+          <Route exact path='/projects'>
+            <Redirect to='/#projects' />
+          </Route>
+          <Route exact path='/projects/:project'>
+            <Projects />
+          </Route>
+        </Switch>
+      </div>
     </>
   );
 }

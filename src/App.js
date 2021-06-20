@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import { NavHashLink } from "react-router-hash-link";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/">
+          <NavHashLink to="/#home" id="test" smooth style={{ display: 'block', marginBottom: '1000vh' }}>Go</NavHashLink>
+          <div id="home">Home</div>
+          <NavHashLink to="/#about" smooth style={{ display: 'block', marginBottom: '1000vh' }}>Go</NavHashLink>
+          <div id="about">About</div>
+          <NavHashLink to="/#test" smooth style={{ display: 'block', marginBottom: '1000vh' }}>Go</NavHashLink>
+        </Route>
+      </Switch>
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ const Header = () => {
         </div>
 
         <nav className='flex items-center text-gray-500 font-medium hidden md:block'>
-          <NavHashLink smooth to='/#home' className='mx-2 px-2 hovtap:hover:text-red-500 active:text-red-500 transition-colors duration-200'>
+          <NavHashLink smooth to='/#home' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200'>
             Home
           </NavHashLink>
           <NavHashLink smooth to='/#about' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200'>
@@ -24,7 +24,7 @@ const Header = () => {
           <NavHashLink smooth to='/#contact' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200'>
             Contact
           </NavHashLink>
-          <a href='resume.pdf' target='_blank' className='ml-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm bg-red-white border border-gray-200 hover:text-red-500 hover:border-red-500 hover:bg-red-50 transition-colors duration-200'>
+          <a href={process.env.PUBLIC_URL + '/resume.pdf'} target='_blank' className='ml-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm bg-red-white border border-gray-200 hovtap:hover:text-red-500 hovtap:hover:border-red-500 hovtap:hover:bg-red-50 transition-colors duration-200'>
             Resume
           </a>
         </nav>

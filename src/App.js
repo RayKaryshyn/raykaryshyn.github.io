@@ -2,6 +2,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import Projects from './Projects';
 import Header from './Header';
+import PageNotFound from './PageNotFound';
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
           <Route exact path='/contact'>
             <Redirect to='/#contact' />
           </Route>
+
+          <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
         </Switch>
       </div>
     </>

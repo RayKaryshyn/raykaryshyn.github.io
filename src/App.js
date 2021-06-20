@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect, Link } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import Projects from './Projects';
 import Header from './Header';

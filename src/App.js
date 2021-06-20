@@ -1,8 +1,6 @@
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { Switch, Route, Redirect, Link } from 'react-router-dom';
 import Projects from './Projects';
 import Header from './Header';
-import PageNotFound from './PageNotFound';
 
 function App() {
   return (
@@ -11,21 +9,21 @@ function App() {
         <Header />
 
         <Switch>
-          <Route exact path='/'>
+          <Route exact path='/' basename={process.env.PUBLIC_URL}>
             <div id='home' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>Home</div>
             <div id='about' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>About</div>
             <div id='projects' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>
               Projects
               <ul>
                 <li>
-                  <HashLink to='/projects/testing1'>
+                  <Link to='/projects/testing1'>
                     Testing1
-                  </HashLink>
+                  </Link>
                 </li>
                 <li>
-                  <HashLink to='/projects/testing2'>
+                  <Link to='/projects/testing2'>
                     Testing2
-                  </HashLink>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -46,8 +44,6 @@ function App() {
           <Route exact path='/contact'>
             <Redirect to='/#contact' />
           </Route>
-
-          <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
         </Switch>
       </div>
     </>

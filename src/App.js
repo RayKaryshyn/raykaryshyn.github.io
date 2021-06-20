@@ -31,11 +31,19 @@ function App() {
             <div id='contact' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>Contact</div>
           </Route>
 
+          <Route exact path='/about'>
+            <Redirect to='/#about' />
+          </Route>
+
           <Route exact path='/projects'>
             <Redirect to='/#projects' />
           </Route>
           <Route exact path='/projects/:project'>
             <Projects />
+          </Route>
+
+          <Route exact path='/contact'>
+            <Redirect to='/#contact' />
           </Route>
         </Switch>
       </div>

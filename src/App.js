@@ -17,9 +17,9 @@ function App() {
               Projects
               <ul>
                 <li>
-                  <Link to='/projects/testing1'>
+                  <HashLink to='/projects/testing1'>
                     Testing1
-                  </Link>
+                  </HashLink>
                 </li>
                 <li>
                   <HashLink to='/projects/testing2'>

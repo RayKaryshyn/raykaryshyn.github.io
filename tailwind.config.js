@@ -16,8 +16,10 @@ module.exports = {
         ],
       },
       screens: {
-        'hovtap': { 
-          'raw': '(hover: hover)' 
+        '2xs': '460px',
+        'xs': '570px',
+        'hovtap': {
+          'raw': '(hover: hover)'
         },
       },
     },

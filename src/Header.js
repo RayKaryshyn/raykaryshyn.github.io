@@ -22,25 +22,44 @@ const Header = () => {
             </div>
 
             <button className='block md:hidden' onClick={() => setClosed(!closed)}>
-              ham
+              <svg width="35" height="35">
+                <g className={["stroke-current fill-current text-gray-600 transform origin-center", !closed ? '-rotate-180' : ''].join(' ')} style={{ transition: 'transform 400ms ease-in-out' }}>
+                  <circle cx="12" cy="12" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
+                  <circle cx="24" cy="12" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
+                  <circle cx="12" cy="24" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
+                  <circle cx="24" cy="24" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
+                  <g>
+                    <path d="M 12 12 L 24 24" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
+                    <path d="M 24 12 L 12 24" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
+                    <path d="M 24 24 L 12 12" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
+                    <path d="M 12 24 L 24 12" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
+                  </g>
+                </g>
+              </svg>
             </button>
           </div>
 
-          <Dropdown closed={closed} transitionOnAppear={false} className='md:hidden'>
-            <nav className='flex items-center text-gray-500 font-medium'>
-              <NavHashLink smooth to='/#home' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
-                Home
-              </NavHashLink>
-              <NavHashLink smooth to='/#about' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
-                About
-              </NavHashLink>
-              <NavHashLink smooth to='/#projects' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
-                Projects
-              </NavHashLink>
-              <NavHashLink smooth to='/#contact' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
-                Contact
-              </NavHashLink>
-              <a href={process.env.PUBLIC_URL + '/resume.pdf'} target='_blank' rel='noreferrer' className='ml-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm bg-red-white border border-gray-200 hovtap:hover:text-red-500 hovtap:hover:border-red-200 hovtap:hover:bg-red-50 transition-colors duration-200'>
+          <Dropdown closed={closed} transitionOnAppear={false} className='md:hidden w-full' style={{ transitionDuration: 200 }}>
+            <nav className='flex items-center text-gray-500 font-medium pt-1 pb-6 2xl:pb-5 xs:pb-4 flex-col xs:flex-row'>
+              <div className='flex flex-col 2xs:flex-row items-center mb-3 xs:mb-0 w-full'>
+                <div className='flex justify-center w-full'>
+                  <NavHashLink smooth to='/#home' className='mr-8 2xl:mx-3 2xl:mr-3 mb-3 2xl:mb-0 px-3 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                    Home
+                  </NavHashLink>
+                  <NavHashLink smooth to='/#about' className='ml-8 2xl:mx-3 px-3 mb-3 2xl:mb-0hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                    About
+                  </NavHashLink>
+                </div>
+                <div className='flex justify-center w-full'>
+                  <NavHashLink smooth to='/#projects' className='mr-8 2xl:mx-3 px-3 mb-1 2xl:mb-0hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                    Projects
+                  </NavHashLink>
+                  <NavHashLink smooth to='/#contact' className='ml-8 2xl:mx-3 px-3 mb-1 2xl:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                    Contact
+                  </NavHashLink>
+                </div>
+              </div>
+              <a href={process.env.PUBLIC_URL + '/resume.pdf'} target='_blank' rel='noreferrer' className='mx-3 whitespace-nowrap inline-flex items-center justify-center px-7 py-1 xs:px-4 xs:py-2 rounded-md shadow-sm bg-red-white border border-gray-200 hovtap:hover:text-red-500 hovtap:hover:border-red-200 hovtap:hover:bg-red-50 transition-colors duration-200'>
                 Resume
               </a>
             </nav>

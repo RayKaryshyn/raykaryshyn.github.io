@@ -6,8 +6,8 @@ function Projects(som) {
 
   return (
     <>
-      <HashLink to="/#projects">Back</HashLink>
-      <br />
+      <HashLink to="/#projects" className='block pt-16 md:pt-20'>Back</HashLink>
+
       Project: {project}
     </>
   );

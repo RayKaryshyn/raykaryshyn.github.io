@@ -23,7 +23,7 @@ const Header = () => {
 
             <button className='block md:hidden' onClick={() => setClosed(!closed)}>
               <svg width="35" height="35">
-                <g className={["stroke-current fill-current text-gray-600 transform origin-center", !closed ? '-rotate-180' : ''].join(' ')} style={{ transition: 'transform 400ms ease-in-out' }}>
+                <g className={["stroke-current fill-current text-gray-600 transform origin-center", !closed ? '-rotate-180' : ''].join(' ')} style={{ transition: 'transform 500ms ease-in-out' }}>
                   <circle cx="12" cy="12" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
                   <circle cx="24" cy="12" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
                   <circle cx="12" cy="24" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
@@ -39,22 +39,22 @@ const Header = () => {
             </button>
           </div>
 
-          <Dropdown closed={closed} transitionOnAppear={false} className='md:hidden w-full' style={{ transitionDuration: 200 }}>
+          <Dropdown closed={closed} transitionOnAppear={false} className='md:hidden w-full' style={{ transitionDuration: 500, transitionTimingFunction: 'ease-in-out' }}>
             <nav className='flex items-center text-gray-500 font-medium pt-1 pb-6 2xl:pb-5 xs:pb-4 flex-col xs:flex-row'>
               <div className='flex flex-col 2xs:flex-row items-center mb-3 xs:mb-0 w-full'>
                 <div className='flex justify-center w-full'>
-                  <NavHashLink smooth to='/#home' className='mr-8 2xl:mx-3 2xl:mr-3 mb-3 2xl:mb-0 px-3 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#home' className='mr-6 2xl:mx-3 2xl:mr-3 mb-5 2xl:mb-0 px-3 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     Home
                   </NavHashLink>
-                  <NavHashLink smooth to='/#about' className='ml-8 2xl:mx-3 px-3 mb-3 2xl:mb-0hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#about' className='ml-6 2xl:mx-3 px-3 mb-5 2xl:mb-0hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     About
                   </NavHashLink>
                 </div>
                 <div className='flex justify-center w-full'>
-                  <NavHashLink smooth to='/#projects' className='mr-8 2xl:mx-3 px-3 mb-1 2xl:mb-0hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#projects' className='mr-6 2xl:mx-3 px-3 mb-3 2xl:mb-0hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     Projects
                   </NavHashLink>
-                  <NavHashLink smooth to='/#contact' className='ml-8 2xl:mx-3 px-3 mb-1 2xl:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#contact' className='ml-6 2xl:mx-3 px-3 mb-3 2xl:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     Contact
                   </NavHashLink>
                 </div>

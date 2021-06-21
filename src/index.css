@@ -15,6 +15,6 @@
 svg path {
     stroke-dasharray: 25.5;
     stroke-dashoffset: 25.5;
-    animation: draw 200ms ease-in forwards;
+    animation: draw 1s ease-in-out forwards;
     stroke-dashoffset: 0;
 }

@@ -11,9 +11,9 @@ function App() {
 
         <Switch>
           <Route exact path='/' basename={process.env.PUBLIC_URL}>
-            <div id='home' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>Home</div>
-            <div id='about' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>About</div>
-            <div id='projects' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>
+            <div id='home' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>Home</div>
+            <div id='about' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>About</div>
+            <div id='projects' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>
               Projects
               <ul>
                 <li>
@@ -28,7 +28,7 @@ function App() {
                 </li>
               </ul>
             </div>
-            <div id='contact' style={{ paddingBottom: '100vh', paddingTop: '5em', marginTop: '-5em' }}>Contact</div>
+            <div id='contact' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>Contact</div>
           </Route>
 
           <Route exact path='/home'>

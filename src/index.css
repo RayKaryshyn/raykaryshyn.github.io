@@ -2,19 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes draw {
-    from {
-        stroke-dashoffset: 25.5;
-    }
-
-    to {
-        stroke-dashoffset: 2.5;
-    }
-}
-
 svg path {
     stroke-dasharray: 25.5;
     stroke-dashoffset: 25.5;
-    animation: draw 1s ease-in-out forwards;
-    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 550ms ease-in-out;
+}
+
+svg path.active {
+    stroke-dashoffset: 18;
 }

@@ -29,10 +29,10 @@ const Header = () => {
                   <circle cx="12" cy="24" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
                   <circle cx="24" cy="24" r={!closed ? '2' : '2.5'} strokeWidth="0"></circle>
                   <g>
-                    <path d="M 12 12 L 24 24" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
-                    <path d="M 24 12 L 12 24" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
-                    <path d="M 24 24 L 12 12" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
-                    <path d="M 12 24 L 24 12" strokeWidth="4" strokeLinecap="round" className={!closed ? '' : 'hidden'}></path>
+                    <path d="M 12 12 L 24 24" strokeWidth="4" strokeLinecap="round" className={closed ? '' : 'active'}></path>
+                    <path d="M 24 12 L 12 24" strokeWidth="4" strokeLinecap="round" className={closed ? '' : 'active'}></path>
+                    <path d="M 24 24 L 12 12" strokeWidth="4" strokeLinecap="round" className={closed ? '' : 'active'}></path>
+                    <path d="M 12 24 L 24 12" strokeWidth="4" strokeLinecap="round" className={closed ? '' : 'active'}></path>
                   </g>
                 </g>
               </svg>

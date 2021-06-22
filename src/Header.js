@@ -24,10 +24,10 @@ const Header = () => {
             <button className='block md:hidden' onClick={() => setClosed(!closed)}>
               <svg width="35" height="35">
                 <g className={["stroke-current fill-current text-gray-600 transform origin-center", !closed ? '-rotate-180' : ''].join(' ')} style={{ transition: 'transform 500ms ease-in-out' }}>
-                  <circle cx="12" cy="12" r="0.01" strokeWidth="5.5" className={closed ? '' : 'active'}></circle>
-                  <circle cx="24" cy="12" r="0.01" strokeWidth="5.5" className={closed ? '' : 'active'}></circle>
-                  <circle cx="12" cy="24" r="0.01" strokeWidth="5.5" className={closed ? '' : 'active'}></circle>
-                  <circle cx="24" cy="24" r="0.01" strokeWidth="5.5" className={closed ? '' : 'active'}></circle>
+                  <circle cx="12" cy="12" r="1.875" strokeWidth="1.75" className={closed ? '' : 'active'}></circle>
+                  <circle cx="24" cy="12" r="1.875" strokeWidth="1.75" className={closed ? '' : 'active'}></circle>
+                  <circle cx="12" cy="24" r="1.875" strokeWidth="1.75" className={closed ? '' : 'active'}></circle>
+                  <circle cx="24" cy="24" r="1.875" strokeWidth="1.75" className={closed ? '' : 'active'}></circle>
                   <g>
                     <path d="M 12 12 L 24 24" strokeWidth="3.75" strokeLinecap="round" className={closed ? '' : 'active'}></path>
                     <path d="M 24 12 L 12 24" strokeWidth="3.75" strokeLinecap="round" className={closed ? '' : 'active'}></path>

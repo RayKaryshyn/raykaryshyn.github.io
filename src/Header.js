@@ -43,23 +43,23 @@ const Header = () => {
             <nav className='flex items-center text-gray-500 font-medium pt-4 xs:pt-2 pb-7 xs:pb-4 flex-col xs:flex-row justify-center'>
               <div className='flex flex-col 2xs:flex-row items-center mb-3 xs:mb-0 w-full justify-center xs:w-auto'>
                 <div className='flex justify-center w-full 2xs:w-auto'>
-                  <NavHashLink smooth to='/#home' className='text-center w-2/5 mx-2 2xs:mx-5 2xs:mx-3 2xl:mr-3 mb-4 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#home' className='text-center w-2/5 mx-2 2xs:mx-5 2xl:mr-3 mb-4 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     Home
                   </NavHashLink>
-                  <NavHashLink smooth to='/#about' className='text-center w-2/5 mx-2 2xs:mx-5 2xs:mx-3 mb-4 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#about' className='text-center w-2/5 mx-2 2xs:mx-5 mb-4 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     About
                   </NavHashLink>
                 </div>
                 <div className='flex justify-center w-full 2xs:w-auto'>
-                  <NavHashLink smooth to='/#projects' className='text-center w-2/5 mx-2 2xs:mx-5 2xs:mx-3 mb-2 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#projects' className='text-center w-2/5 mx-2 2xs:mx-5 mb-2 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     Projects
                   </NavHashLink>
-                  <NavHashLink smooth to='/#contact' className='text-center w-2/5 mx-2 2xs:mx-5 2xs:mx-3 mb-2 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#contact' className='text-center w-2/5 mx-2 2xs:mx-5 mb-2 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     Contact
                   </NavHashLink>
                 </div>
               </div>
-              <a href={process.env.PUBLIC_URL + '/resume.pdf'} target='_blank' rel='noreferrer' className='mx-3 xs:mx-4 whitespace-nowrap inline-flex items-center justify-center px-7 py-1 xs:px-4 xs:py-2 rounded-md shadow-sm bg-red-white border border-gray-200 hovtap:hover:text-red-500 hovtap:hover:border-red-200 hovtap:hover:bg-red-50 transition-colors duration-200'>
+              <a href={process.env.PUBLIC_URL + '/resume.pdf'} target='_blank' rel='noreferrer' className='mx-3 xs:ml-4 xs:mr-5 whitespace-nowrap inline-flex items-center justify-center px-7 py-1 xs:px-4 xs:py-2 rounded-md shadow-sm bg-red-white border border-gray-200 hovtap:hover:text-red-500 hovtap:hover:border-red-200 hovtap:hover:bg-red-50 transition-colors duration-200'>
                 Resume
               </a>
             </nav>

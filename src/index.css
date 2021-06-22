@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+svg circle {
+    transition: stroke-width 500ms ease-in-out;
+}
+
+svg circle.active {
+    stroke-width: 3.75px;
+}
+
 svg path {
     stroke-dasharray: 25.5;
     stroke-dashoffset: 25.5;

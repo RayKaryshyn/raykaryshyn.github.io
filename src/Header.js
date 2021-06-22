@@ -3,12 +3,9 @@ import { NavHashLink } from 'react-router-hash-link'
 import Dropdown from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
 
-const Header = () => {
+const Header = (props) => {
   const [closed, setClosed] = React.useState(true);
-
-  /* const func = () => {
-    useEffect(() => setClosed(true))
-  } */
+  const { inViewport } = props;
 
   return (
     <header className='top-0 z-40 bg-white font-display fixed w-full left-0'>
@@ -54,7 +51,7 @@ const Header = () => {
                   <NavHashLink smooth to='/#projects' className='text-center w-2/5 mx-2 2xs:mx-5 mb-2 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
                     Projects
                   </NavHashLink>
-                  <NavHashLink smooth to='/#contact' className='text-center w-2/5 mx-2 2xs:mx-5 mb-2 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)}>
+                  <NavHashLink smooth to='/#contact' className='text-center w-2/5 mx-2 2xs:mx-5 mb-2 2xs:mb-1 xs:mb-0 hovtap:hover:text-red-500 transition-colors duration-200' onClick={() => setClosed(true)} style={{ color: inViewport ? 'black' : '' }}>
                     Contact
                   </NavHashLink>
                 </div>
@@ -75,7 +72,7 @@ const Header = () => {
             <NavHashLink smooth to='/#projects' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200'>
               Projects
             </NavHashLink>
-            <NavHashLink smooth to='/#contact' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200'>
+            <NavHashLink smooth to='/#contact' className='mx-2 px-2 hovtap:hover:text-red-500 transition-colors duration-200' style={{ color: inViewport ? 'black' : '' }}>
               Contact
             </NavHashLink>
             <a href={process.env.PUBLIC_URL + '/resume.pdf'} target='_blank' rel='noreferrer' className='ml-3 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm bg-red-white border border-gray-200 hovtap:hover:text-red-500 hovtap:hover:border-red-200 hovtap:hover:bg-red-50 transition-colors duration-200'>

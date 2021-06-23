@@ -8,7 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 
 smoothscroll.polyfill();
-require('intersection-observer');
 
 ReactDOM.render(
   <React.StrictMode>

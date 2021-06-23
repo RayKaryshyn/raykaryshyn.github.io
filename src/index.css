@@ -19,3 +19,7 @@ svg path {
 svg path.active {
     stroke-dashoffset: 18;
 }
+
+.nav-item.active {
+    color: black;
+}

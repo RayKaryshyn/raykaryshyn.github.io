@@ -20,6 +20,11 @@ svg path.active {
     stroke-dashoffset: 18;
 }
 
-.nav-item.active {
+.nav-item {
+    border-bottom: 2px solid white;
+}
+
+.nav-item.actives {
     color: black;
+    border-bottom: 2px solid red;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { NavHashLink } from 'react-router-hash-link'
 import Dropdown from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
@@ -6,7 +6,7 @@ import 'react-slidedown/lib/slidedown.css'
 const Header = () => {
   const [closed, setClosed] = React.useState(true);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const myFunc = () => {
       const hh = document.getElementById('home').getBoundingClientRect().height;
       const ht = document.getElementById('home').getBoundingClientRect().top;
@@ -20,43 +20,48 @@ const Header = () => {
       const ch = document.getElementById('contact').getBoundingClientRect().height;
       const ct = document.getElementById('contact').getBoundingClientRect().top;
 
-      [...document.querySelectorAll('.nav-item-home')].forEach(function (x) {
-        if (-1 * ht < hh) {
+      if (-1 * ht < hh) {
+        [...document.querySelectorAll('.nav-item-home')].forEach(function (x) {
           x.classList.add('active');
-        } else {
+        });
+      } else {
+        [...document.querySelectorAll('.nav-item-home')].forEach(function (x) {
           x.classList.remove('active');
-        }
-      });
-      [...document.querySelectorAll('.nav-item-about')].forEach(function (x) {
-        if (-1 * at < ah && at <= 0) {
+        });
+      }
+      if (-1 * at < ah && at <= 0) {
+        [...document.querySelectorAll('.nav-item-about')].forEach(function (x) {
           x.classList.add('active');
-        } else {
+        });
+      } else {
+        [...document.querySelectorAll('.nav-item-about')].forEach(function (x) {
           x.classList.remove('active');
-        }
-      });
-      [...document.querySelectorAll('.nav-item-projects')].forEach(function (x) {
-        if (-1 * pt < ph && pt <= 0) {
+        });
+      }
+      if (-1 * pt < ph && pt <= 0) {
+        [...document.querySelectorAll('.nav-item-projects')].forEach(function (x) {
           x.classList.add('active');
-        } else {
+        });
+      } else {
+        [...document.querySelectorAll('.nav-item-projects')].forEach(function (x) {
           x.classList.remove('active');
-        }
-      });
-      [...document.querySelectorAll('.nav-item-contact')].forEach(function (x) {
-        if (-1 * ct < ch && ct <= 0) {
+        });
+      }
+      if (-1 * ct < ch && ct <= 0) {
+        [...document.querySelectorAll('.nav-item-contact')].forEach(function (x) {
           x.classList.add('active');
-        } else {
+        });
+      } else {
+        [...document.querySelectorAll('.nav-item-contact')].forEach(function (x) {
           x.classList.remove('active');
-        }
-      });
+        });
+      }
     };
 
-    window.onload = () => {
-      myFunc();
-    }
     window.onscroll = () => {
       myFunc();
     }
-  }, []);
+  }, []); */
 
   return (
     <header className='top-0 z-40 bg-white font-display fixed w-full left-0'>

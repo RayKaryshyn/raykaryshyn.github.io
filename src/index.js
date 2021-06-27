@@ -4,16 +4,17 @@ import './index.css';
 import './fonts.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
+import history from "./history";
 
 smoothscroll.polyfill();
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Router history={history}>
       <App />
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,7 +1,7 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Projects from './Projects';
 import Header from './Header';
-import { HashLink } from 'react-router-hash-link';
+import OnePage from './onepage';
 
 function App() {
   return (
@@ -11,24 +11,7 @@ function App() {
 
         <Switch>
           <Route exact path='/' basename={process.env.PUBLIC_URL}>
-            <div id='home' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>Home</div>
-            <div id='about' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>About</div>
-            <div id='projects' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>
-              Projects
-              <ul>
-                <li>
-                  <HashLink to='/projects/testing1'>
-                    Testing1
-                  </HashLink>
-                </li>
-                <li>
-                  <HashLink to='/projects/testing2'>
-                    Testing2
-                  </HashLink>
-                </li>
-              </ul>
-            </div>
-            <div id='contact' style={{ paddingBottom: '100vh' }} className='pt-16 md:pt-20'>Contact</div>
+            <OnePage />
           </Route>
 
           <Route exact path='/home'>

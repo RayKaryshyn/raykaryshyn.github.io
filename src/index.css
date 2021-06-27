@@ -22,9 +22,10 @@ svg path.active {
 
 .nav-item {
     border-bottom: 2px solid white;
+    transition: all 200ms ease-in-out;
 }
 
 .nav-item.actives {
     color: black;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid rgba(239, 68, 68, var(--tw-text-opacity));
 }

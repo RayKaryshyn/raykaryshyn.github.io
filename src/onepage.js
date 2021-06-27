@@ -15,8 +15,20 @@ const OnePage = () => {
             elm.classList.remove('actives');
         });
 
-        if (document.getElementById('home') && document.getElementById('home').getBoundingClientRect().top === 0) {
+        if (document.getElementById('home') && document.getElementById('home').getBoundingClientRect().bottom >= 10) {
             document.querySelectorAll('.nav-item-home').forEach(elm => {
+                elm.classList.add('actives');
+            });
+        } else if (document.getElementById('about') && document.getElementById('about').getBoundingClientRect().bottom >= 10) {
+            document.querySelectorAll('.nav-item-about').forEach(elm => {
+                elm.classList.add('actives');
+            });
+        } else if (document.getElementById('projects') && document.getElementById('projects').getBoundingClientRect().bottom >= 10) {
+            document.querySelectorAll('.nav-item-projects').forEach(elm => {
+                elm.classList.add('actives');
+            });
+        } else if (document.getElementById('contact') && document.getElementById('contact').getBoundingClientRect().bottom >= 10) {
+            document.querySelectorAll('.nav-item-contact').forEach(elm => {
                 elm.classList.add('actives');
             });
         }
